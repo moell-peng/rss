@@ -1,5 +1,5 @@
-## Moell/RSS
-Moell/RSS是遵循RSS２.0标准的包
+## moell/rss
+moell/rss是遵循RSS２.0标准的包
 
 ### RSS规范
 [http://www.rssboard.org/rss-specification](http://www.rssboard.org/rss-specification)

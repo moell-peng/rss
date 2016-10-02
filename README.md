@@ -1,5 +1,5 @@
-## Moell/RSS
-Moell/RSS is a package that follows the RSS 2.0 standard
+## moell/rss
+moell/rss is a package that follows the RSS 2.0 standard
 
 ### RSS specification
 [http://www.rssboard.org/rss-specification](http://www.rssboard.org/rss-specification)
