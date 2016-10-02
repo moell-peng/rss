@@ -1,7 +1,7 @@
 {
     "name": "moell/rss",
-    "description": "This is a RSS generator",
-    "keywords": ['rss'],
+    "description": "Moell/RSS is a package that follows the RSS 2.0 standard",
+    "keywords": ["rss"],
     "type": "library",
     "license": "MIT",
     "authors": [
