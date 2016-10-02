@@ -1,29 +1,30 @@
 ## Moell/RSS
+Moell/RSS是遵循RSS２.0标准的包
 
-### RSS specification
+### RSS规范
 [http://www.rssboard.org/rss-specification](http://www.rssboard.org/rss-specification)
 
-### 中文README
-[README](README_zh.md)
 
-### Requirement
+### 要求
 PHP >= 5.4.0
 
-### Installation
+### 安装
 ```shell
 composer require "moell/rss:~0.1.0"
 ```
-### Provides an interface
+### 提供接口
 ```php
-
+//设置字符集
 public function setEncode($encode); //默认UTF-8
 
 public function channel(array $channel);
 
 public function item(array $item);
 
+//构造xml
 public function build();
 
+//快速构造
 public function fastBuild(array $channel, array $item);
 
 public function __toString();
