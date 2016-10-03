@@ -14,7 +14,7 @@ interface RssContract
 
     public function item(array $item);
 
-    public function items(array $item);
+    public function items(array $items);
 
     public function build();
 

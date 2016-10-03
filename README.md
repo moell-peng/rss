@@ -23,6 +23,8 @@ public function channel(array $channel);
 
 public function item(array $item);
 
+public function items(array $items);
+
 public function build();
 
 public function fastBuild(array $channel, array $item);
@@ -48,8 +50,9 @@ $channel = [
 
 $rss->channel($channel);
 
-for($i = 0; $i < 1; $i++) {
-    $rss->item([
+$items = [];
+for($i = 0; $i < 2; $i++) {
+    $item = [
         'title' => "title".$i,
         'description' => 'description',
         'source' => [
@@ -58,15 +61,19 @@ for($i = 0; $i < 1; $i++) {
                 'url' => 'http://www.moell.cn'
             ]
         ]
-    ]);
+    ];
+    $items[] = $item;
+    $rss->item($item);
 }
 
-$rss->build();	//Construct the data
 echo $rss;	//Get xml
 
 //Other acquisition methods
 $rss->build()->asXML();
-$rss->fastBuild($channel, $item)->asXML();
+
+$rss->fastBuild($channel, $items)->asXML();
+
+$rss->channel($channel)->items($items)->build()->asXML();
 ```
 ### Generate results
 ```xml
@@ -80,6 +87,11 @@ $rss->fastBuild($channel, $item)->asXML();
     <category domain="http://www.moell.cn">html</category>
     <item>
         <title>title0</title>
+        <description>description</description>
+        <source url="http://www.moell.cn">moell.cn</source>
+    </item>
+    <item>
+        <title>title1</title>
         <description>description</description>
         <source url="http://www.moell.cn">moell.cn</source>
     </item>
