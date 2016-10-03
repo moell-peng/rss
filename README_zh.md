@@ -10,7 +10,7 @@ PHP >= 5.4.0
 
 ### 安装
 ```shell
-composer require "moell/rss:~0.1.0"
+composer require "moell/rss:1.*"
 ```
 ### 提供接口
 ```php

@@ -12,7 +12,7 @@ PHP >= 5.4.0
 
 ### Installation
 ```shell
-composer require "moell/rss:~0.1.0"
+composer require "moell/rss:1.*"
 ```
 ### Provides an interface
 ```php
