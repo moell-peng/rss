@@ -106,9 +106,7 @@ class Rss implements RssContract
 
         $xml = new \SimpleXMLElement('<?xml version="1.0" encoding="'.$this->encode.'"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"></rss>');
 
-        $this->addChannel($xml);
-
-        $this->addItem($xml);
+        $this->addItem($this->addChannel($xml));
 
         return $xml;
     }
@@ -133,9 +131,13 @@ class Rss implements RssContract
      */
     private function addChannel($xml)
     {
+        $node = $xml->addChild('channel');
+
         foreach ($this->channel as $key => $value) {
-            $this->addNode($key, $value, $xml);
+            $this->addNode($key, $value, $node);
         }
+
+        return $node;
     }
 
     /**

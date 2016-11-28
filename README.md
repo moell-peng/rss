@@ -81,20 +81,22 @@ $rss->channel($channel)->items($items)->build()->asXML();
 <rss
     xmlns:content="http://purl.org/rss/1.0/modules/content/"
     xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <title>title</title>
-    <link>http://moell.cn</link>
-    <description>description</description>
-    <category domain="http://www.moell.cn">html</category>
-    <item>
-        <title>title0</title>
+    <channel>
+        <title>title</title>
+        <link>http://moell.cn</link>
         <description>description</description>
-        <source url="http://www.moell.cn">moell.cn</source>
-    </item>
-    <item>
-        <title>title1</title>
-        <description>description</description>
-        <source url="http://www.moell.cn">moell.cn</source>
-    </item>
+        <category domain="http://www.moell.cn">html</category>
+        <item>
+            <title>title0</title>
+            <description>description</description>
+            <source url="http://www.moell.cn">moell.cn</source>
+        </item>
+        <item>
+            <title>title1</title>
+            <description>description</description>
+            <source url="http://www.moell.cn">moell.cn</source>
+        </item>
+    </channel>
 </rss>
 ```
 
